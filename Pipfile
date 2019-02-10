@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+dj-database-url = "==0.5.0"
+django-add-default-value = "==0.0.8"
+django-bootstrap3 = "==11.0.0"
+django-grappelli = "==2.12.2"
+djangorestframework = "==3.9.1"
+gunicorn = "==19.9.0"
+psycopg2 = "==2.7.7"
+pytz = "==2018.9"
+Django = "==2.0.10"
+Pillow = "==5.4.1"
+Pygments = "==2.3.1"
+
+[requires]
+python_version = "3.6"
