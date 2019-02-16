@@ -25,7 +25,7 @@ SECRET_KEY = '6!g+1&49%=_&-eihigwiy=pky4yk5plzhx$+v)^fahv(i1ssw+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['.herokuapp.com', '.askdox.io']
 
 
 # Application definition
@@ -64,7 +64,7 @@ ROOT_URLCONF = 'nlp_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

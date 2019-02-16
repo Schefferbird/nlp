@@ -5,22 +5,27 @@ from django.shortcuts import render,redirect
 from .forms import ContactForm
 
 def home_page(request):
+    
     context = {
-        "title":"Home Page",
+        "title":"Hello World!",
+        "content":" Welcome to the homepage.",
+
     }
-    return render(request, "home_page.html", context)
+    ''' if request.user.is_authenticated():
+        context["premium_content"] = "YEAHHHHHH" '''
+    return render(request, 'home_page.html', context)
 
 def faq_page(request):
     # print(request.session.get("first_name", "Unknown"))
     # request.session['first_name']
     context = {
         "title":"Hello World!",
-        "content":" Welcome to the homepage.",
+        "content":" Welcome to the F.A.Q.",
 
     }
-    if request.user.is_authenticated():
-        context["premium_content"] = "YEAHHHHHH"
-    return render(request, "faq_page.html", context)
+   
+
+    return render(request, 'faq/view.html', context)
 
 
 def about_page(request):
@@ -28,7 +33,7 @@ def about_page(request):
         "title":"About Page",
         "content":" Welcome to the about page."
     }
-    return render(request, "about_page.html", context)
+    return render(request, 'about/view.html', context)
 
 
 def contact_page(request):
@@ -39,7 +44,7 @@ def contact_page(request):
         "form": contact_form,
     }
     if contact_form.is_valid():
-        print(contact_form.cleaned_data)
+    
         if request.is_ajax():
             return JsonResponse({"message": "Thank you for your submission"})
 
@@ -49,4 +54,4 @@ def contact_page(request):
             return HttpResponse(errors, status=400, content_type='application/json')
 
 
-    return render(request, "contact/view.html", context)
+    return render(request, 'contact/view.html', context)
