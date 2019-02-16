@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
+
 {% block content %}
+
 <h1>Account</h1>
 <div class="d-flex flex-wrap"></div>
   <div class="card border-dark bg-dark text-white">
@@ -32,9 +34,9 @@
 
       <span class="card-text"><small class="text-muted"> </small></span>
       <div class='list-group'>
-        <a class='list-group-item' href='{% url "action_log" %}'>Actions</a>
-        <a class='list-group-item' href='{% url "download_log" %}'>Downloads</a>
-        <a class='list-group-item' href='{% url "query_log" %}'>Queries</a>
+        <a class='list-group-item' href='#'>Actions</a>
+        <a class='list-group-item' href='#'>Downloads</a>
+        <a class='list-group-item' href='#'>Queries</a>
       </div>
     </div>
 
@@ -50,7 +52,7 @@
       <div class='list-group'>
         <a class='list-group-item' href='{% url "faq" %}'>FAQ</a>
         <a class='list-group-item' href='{% url "contact" %}'>Contact</a>
-        <a class='list-group-item' href='{% url "about" %}'>About ASK</a>
+        <a class='list-group-item' href='{% url "about" %}'>About Askdox</a>
       </div>
     </div>
 

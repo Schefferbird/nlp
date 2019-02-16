@@ -29,7 +29,8 @@ from .views import about_page, contact_page, faq_page, home_page
 urlpatterns = [
     url(r'^$', home_page, name='home'),
     url(r'^api/', include('log.urls')),
-    url(r'^accounts/', include('accounts.urls')),
+    url(r'^accounts/$', RedirectView.as_view(url='/account')),
+    url(r'^account/', include(("accounts.urls", 'accounts'), namespace='account')),
     url(r'^accounts/', include("accounts.passwords.urls")),
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^register/$', RegisterView.as_view(), name='register'),

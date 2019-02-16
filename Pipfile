@@ -17,6 +17,12 @@ pytz = "==2018.9"
 Django = "==2.0.10"
 Pillow = "==5.4.1"
 Pygments = "==2.3.1"
+urllib3 = "*"
+six = "*"
+python-dateutil = "*"
+jmespath = "*"
+docutils = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.6"
