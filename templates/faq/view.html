@@ -3,31 +3,21 @@
 {% block content %}
 
 <div class="d-flex flex-wrap">
-
-
-        <div class="card border-dark bg-dark text-white" >
-
-          
-        
-            <div class="card-img-overlay ">
-                    <!-- <h5 class="card-title text-black">{{ lg.title }}</h5>
+    <div class="card border-dark bg-dark text-white">
+        <div class="card-img-overlay ">
+            <!-- <h5 class="card-title text-black">{{ lg.title }}</h5>
                     <p class="card-text text-black"> {{ lg.created | date:"Y-m-d" }} {{ lg.created | time:"H" }} </p> -->
-            </div>
-        
-            <div class="card-body">
-                <h5 class="card-title">{{ lg.title }}</h5>
-                <span class="card-text" ><small class="text-muted"> f.a.q </small></span>
-             
-                <!-- <p> {{ lg.created }}</p>  -->
-                <p class="card-text">Short info</p>
-            </div>
-
         </div>
-    
 
-    {% endfor %}
+        <div class="card-body">
+            <h5 class="card-title">{{ lg.title }}</h5>
+            <span class="card-text"><small class="text-muted"> f.a.q </small></span>
 
+            <!-- <p> {{ lg.created }}</p>  -->
+            <p class="card-text">Short info</p>
+        </div>
 
+    </div>
 </div>
 
 {% endblock %}

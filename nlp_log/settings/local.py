@@ -27,6 +27,22 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
+ALLOWED_HOSTS = ['localhost','127.0.0.1']
+
+EMAIL_HOST = 'smtp.askdox.io'
+EMAIL_HOST_USER = 'admin@askdox.io' 
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'yourpassword')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Ask your dox <askdox.io>'
+BASE_URL = '127.0.0.1:8000'
+
+
+MANAGERS = (
+    ('Richard Scheffer', "admin@askdox.io"),
+)
+
+ADMINS = MANAGERS
 
 # Application definition
 

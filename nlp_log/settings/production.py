@@ -28,6 +28,23 @@ DEBUG = True
 ALLOWED_HOSTS = ['.herokuapp.com', '.askdox.io']
 
 
+ALLOWED_HOSTS = ['localhost','127.0.0.1']
+
+EMAIL_HOST = 'smtp.askdox.io'
+EMAIL_HOST_USER = 'admin@askdox.io' 
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'yourpassword')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Ask your dox <askdox.io>'
+BASE_URL = 'askdox.io'
+
+
+MANAGERS = (
+    ('Richard Scheffer', "admin@askdox.io"),
+)
+
+ADMINS = MANAGERS
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -138,16 +155,11 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static_my_proj"),
-]
-
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn", "static_root")
-
-
+# Meida files (Images)
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn", "media_root")
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
